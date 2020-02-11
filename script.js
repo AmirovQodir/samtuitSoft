@@ -17,11 +17,3 @@ function readLine(line){
     }
     return ans(ar[1],ar[2],ar[3]);
 }
-
-function ans(a,b,c){
-    let s;
-    s=a+b+c;
-    s=s/2;
-    //console.log(s.toFixed(2));
-   print(s.toFixed(2));
-}
