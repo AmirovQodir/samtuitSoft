@@ -1,0 +1,587 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "blinkmacsystem-menu";
+    src: url(./fonts/menu.ttf);
+}
+@font-face {
+    font-family: "blinkmacsystem-text";
+    src: url(./fonts/text.ttf);
+}
+
+body {
+    font-family: 'blinkmacsystem-text', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@media (max-width: 770px){
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.container {
+    margin: auto
+}
+
+/* COMMON CLASSES */
+
+.primary-text {
+    color: #015998 ;
+
+}
+
+.primary-background {
+    background: #56a79a;
+}
+
+/* HEADER */
+
+#main-header {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 5;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(36,36,36,.12);
+    box-shadow: 0 1px 5px 0 rgba(36,36,36,.12);
+    background-color: #fff;
+    width: 100%;
+    padding: 0 15px;
+    font-weight: 700;
+}
+
+#main-header .logo h1 {
+    margin: 0;
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 5px;
+    
+}
+
+#main-header .main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+#main-header .open-menu-btn {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    display: none;
+}
+
+#main-header .open-menu-btn:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    #main-header {
+        padding: 10px 15px;
+    }
+}
+
+#main-header .logo {
+    display: inline-block;
+    width: 100%;
+    
+}
+
+#main-header .logo a {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main-header .logo img{
+    width: 60px;
+}
+
+
+.flex-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 990px) {
+    #main-header .logo {
+        margin: 10px 0;
+    }
+    #main-header .open-menu-btn {
+        display: inline-block;
+    }
+    .flex-side {
+        visibility: hidden;
+        position: absolute;
+    }
+    .openSideMenu .flex-side {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 59px);
+        background-color: #fff;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .openSideMenu .flex-side #navbar {
+        width: 100%;
+    }
+    .openSideMenu .flex-side #navbar ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+        
+    }
+    .openSideMenu .flex-side #navbar ul li {
+        
+        display: block;
+        width: 100%;
+        padding-left: 15px;
+        border-top: 1px solid #f2f2f2;
+        
+    }
+    .openSideMenu .flex-side #navbar ul li:last-child {
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .openSideMenu .flex-side #navbar ul li a {
+        display: block;
+        text-decoration: none;
+        padding: 17px 0;
+        color: inherit;
+    }
+
+    .openSideMenu .top-action {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .openSideMenu .choose-lang {
+        margin-left: 25px;
+        margin-bottom: 15px;
+    }
+
+    .openSideMenu #lang {
+        padding-left: 0;
+    }
+
+    .openSideMenu a.sign-in {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    .openSideMenu a.sign-in:hover {
+        border-bottom: 2px solid #2158a6;
+        padding-bottom: 3px;
+    }
+    .openSideMenu #wrap-Nav {
+        position: absolute;
+        visibility: hidden;
+        z-index: 10;
+        display: block;
+        top: 8px;
+        left: -5px;
+        
+    }
+}
+
+
+/* .current-lang {
+    
+} */
+
+.current-lang button {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    outline: none;
+    border: 0;
+}
+.current-lang button span {
+    padding: 0 10px;
+    font-weight: 700;
+}
+
+.current-lang button:hover {
+    cursor: pointer;
+}
+
+.current-lang img {
+    width: 25px;
+}
+@media (min-width: 990px) {
+   
+    #menu-side {
+        display: flex;
+    }
+    #navbar li {
+        display: inline;
+        padding-right: 20px;
+        list-style-type: none;
+    }
+    
+    #navbar a,  a.sign-in {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    #navbar li.current a, #navbar a:hover, a.sign-in:hover, .wrap-items .list .active {
+        color: #b7b7b7;
+        border-bottom: 2px solid #2158a6;
+        padding-bottom: 3px;
+    }
+    
+    #wrap-Nav{
+        visibility: hidden;
+    }
+}
+#navbar {
+    font-family: "blinkmacsystem-menu";
+    color: #333;
+    font-size: 1em;
+}
+
+.wrap-items {
+    display: inline-block;
+    width: 160px;
+    background-color: #2f3c46;
+    padding: 40px 0;
+    position: absolute;
+    top: 60px;
+    right: 225px;
+}
+
+.wrap-items .list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.wrap-items .list .item {
+    padding: 8px;
+    font-weight: 200;
+}
+
+
+.wrap-items .list .item:hover {
+    cursor: pointer;
+}
+
+.auth-btns, .auth-btns .get-in-touch  {
+    margin-left: 25px;
+}
+
+.get-in-touch {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 155px;
+    height: 54px;
+    
+}
+
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    background: #fff;
+    vertical-align: middle;
+    line-height: 54px;
+    text-align: center;
+    border-radius: 90px;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #056eb9;
+    font-weight: 700;
+    outline: none;
+
+}
+
+.get-in-touch:hover {
+    transition: 0.5s;
+    background: linear-gradient(90deg,#6b5392 0,#6b5392 18%,#1165b2 60%,#00a4d4 100%);
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* ShOWCASE */
+
+#showcase {
+    box-sizing: content-box;
+    display: block;
+    background: url(../images/bg_1.png) no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: cover;
+    margin-bottom: 30px;
+    height: 525px;
+    width: 100%;
+    padding: 50px 0;
+}
+
+#showcase .container {
+    margin-top: 50px;
+}
+
+#showcase h2 {
+    font-family: sans-serif;
+    font-size: 70px;
+    color: #333;
+    font-weight: 100;
+    margin: 0;
+
+}
+
+#showcase p {
+    font-family: "blinkmacsystem-text" ;
+    color: #888888;
+    font-size: 18px;
+}
+
+#showcase .buttons {
+    margin-top: 25px;
+    font-size: 17px;
+    font-weight: 700;
+    display: flex;
+}
+
+#showcase .discover {
+    border: 0;
+    width: 185px;
+    margin-right: 40px;
+    margin-bottom: 25px;
+    height: 65px;
+    font-weight: 700;
+    font-size: inherit;
+    color: white;
+    background: linear-gradient(90deg,#6b5392 0,#6b5392 18%,#1165b2 60%,#00a4d4 100%);
+}
+
+#showcase .btn:hover {
+    transition: 0.5s;
+    background: none;
+    background-color: #2d3a49 !important;
+    cursor: pointer;
+    color: white;
+}
+
+#showcase label:hover {
+    cursor: pointer;
+}
+
+#showcase .play {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    margin-right: 20px;
+    border-color: #eeeeee;
+    color: #056eb9;
+}
+
+.right-bg {
+    visibility: hidden;
+}
+
+
+
+@media (min-width: 990px) {
+    .right-bg {
+        visibility: visible;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: 450px;
+    }
+}
+
+/* FEATURES */
+
+#features h2 {
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 10px;
+
+}
+
+#features p {
+    color: #777;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+#features .fa {
+    font-size: 60px;
+    color: #56a79a;
+}
+    
+
+/* INFO  */
+
+#info {
+    background: #333 url(../images/inform.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+#info h2 {
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 10px;
+
+}
+
+#info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#info li {
+    line-height: 2em;
+    font-size: 20px;
+}
+
+
+/* COMPANY */
+
+#company {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+
+}
+
+#company h4 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+#company ul {
+    padding: 0;
+    list-style: none;
+    line-height: 2em;
+}
+
+#company button {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+
+}
+
+#company input {
+    padding: 7px;
+}
+
+
+/* FOOTER */
+
+#main-footer {
+    background: #56a79a;
+    color: white;
+}
+
+/* PAGE */
+
+#page {
+    margin-bottom: 40px;
+}
+
+/* SERVICES */
+
+.service ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+.service ul li:nth-child(odd){
+    background-color: #333;
+    color: #fff;
+
+}
+.service ul li:nth-child(even){
+    background-color: #56a79a;
+    color: #fff;
+
+}
+
+/* CONTACT */
+#contact form {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.contact form input[type="text"] {
+    width: 50%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.contact form textarea {
+    width: 50%;
+    height: 100px;
+}
+
+.contact form button {
+    width: 50%;
+    height: 30px;
+    padding: 10 0;
+    border: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+.contact form label {
+    text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+    #showcase h2 {
+        font-size: 55px;
+        display: inline-block;
+        width: 60%;
+    }
+
+}
+@media (max-width: 580px) {
+    #showcase h2 {
+        font-size: 40px;
+        display: inline-block;
+        width: 60%;
+
+    }
+    #showcase .buttons {
+        flex-direction: column;
+    }
+
+}
+
