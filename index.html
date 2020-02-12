@@ -1,12 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Samtuit-Soft LCC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/flexboxgrid.css ">
+    <link rel="stylesheet" href="./css/libs/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/ico.png" type="image/x-icon">
+
+    <script src="./js/script.js"></script>
 </head>
+
 <body>
-    
+
+
+
+    <!--header-->
+    <header id="main-header">
+        <div class="header-container">
+            <div class="row middle-xs middle-sm middle-md middle-lg">
+                <div class=" col-xs-12 col-sm-12  col-md-2 col-lg-3 main-menu">
+                    <div class="logo">
+                            <a href="#"><img src="./images/samLogo.png" alt="logoSamtuit">
+                            <h1><span class="primary-text">SamtuitSoft</span></h1>
+                        </a>
+                    </div>
+                    <div class="menu-icon">
+                        <button onclick="openSideMenu()" class="open-menu-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                </div>
+                <div id="sideNav" class="col-xs-12 col-sm-12 col-md-10 col-lg-9 ">
+                    <div id="menu-side" class="flex-side">
+                        <nav id="navbar">
+                            <ul>
+                                <li><a href="#" onclick='return openSideMenu()'>Home</a></li>
+                                <li><a href="#services" onclick='return openSideMenu()'>Services</a></li>
+                                <li><a href="#pricing" onclick='return openSideMenu()'>Pricing</a></li>
+                                <li class="current"><a href="#aboutus"  onclick='return openSideMenu()'>About</a></li>
+                                <li><a href="#features" onclick='return openSideMenu()'>Features</a></li>
+                            </ul>
+                        </nav>
+                        <div class="top-action">
+                            <div class="choose-lang">
+                                <div class="current-lang">
+                                    <button id="lang" onclick="openMenu()"> <img id="lang" src="./images/eng.png"
+                                            alt="lang_flag">
+                                        <span>En</span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                </div>
+                                <div class="wrap-items" id="wrap-Nav">
+                                    <ul class="list">
+                                        <li class="item eng active">English</li>
+                                        <li class="item rus ">Русский</li>
+                                        <li class="item uz ">O'zbek</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="auth-btns">
+                                <a class="sign-in" href="#"  onclick='return openSideMenu()'>Sign In</a>
+                                <a href="#contact" class="get-in-touch btn"  onclick='return openSideMenu()'>Get in Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Showcase-->
+    <section id="showcase">
+        <div class="container">
+            <div class="row middle-xs middle-sm middle-md middle-lg">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <h2>Innovatsion g'oyalardan innovatsion loyihalargacha</h2>
+                    <p>Bizning loyihalrim o'z egalariga foyda keltirishi uchun qayg'uramiz va mijozlarga
+                        Internet-marketing yordamida muvaffaqiyatli biznes qurishga yordam beramiz.</p>
+                    <div class="buttons">
+                        <div>
+                            <button class="btn discover">Discover</button>
+                        </div>
+                        <div>
+                            <button id="watch" class="btn play"><i class="fa fa-play"></i></button>
+                            <label for="watch">Watch video</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <img src="./images/shape_2.png" alt="shape" class="right-bg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="aboutus">
+        <!-- Subheader -->
+        <div id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>About Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Main page-->
+        <section id="page" class="about">
+            <div class="container">
+                <div class="row center-xs center-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2><span class="primary-text">Who</span> we Are</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nulla, error ullam obcaecati
+                            fugit ab debitis eveniet autem facere accusantium.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat placeat, itaque impedit eum
+                            optio culpa expedita harum quibusdam temporibus. Consequatur!</p>
+                        <h2><span class="primary-text">What</span> We Do</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nulla, error ullam obcaecati
+                            fugit ab debitis eveniet autem facere accusantium.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat placeat, itaque impedit eum
+                            optio culpa expedita harum quibusdam temporibus. Consequatur!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+
+        <section id="services">
+
+            <!-- Subheader -->
+            <div id="subheader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h2>Services</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Main page-->
+            <section id="page" class="service">
+                <div class="container">
+                    <div class="row center-xs center-sm center-md center-lg">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h2><span class="primary-text">See</span> What We Offer</h2>
+                            <ul>
+                                <li>
+                                    <h3>Web Disign & Development</h3>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, corporis dolorum.
+                                        Nemo delectus, adipisci obcaecati at minima dolores provident sunt, ut omnis,
+                                        porro ex labore!
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Software Development</h3>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, corporis dolorum.
+                                        Nemo delectus, adipisci obcaecati at minima dolores provident sunt, ut omnis,
+                                        porro ex labore!
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Graphic Disign</h3>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, corporis dolorum.
+                                        Nemo delectus, adipisci obcaecati at minima dolores provident sunt, ut omnis,
+                                        porro ex labore!
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </section>
+    <!--Features-->
+    <section id="features">
+        <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2>Core features</h2>
+                    <p>What's Included</p>
+
+                    <!--Icon row 1-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="fa fa-dashboard"></div><br>
+                            <h4>Fully Optimazed</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="fa fa-question"></div><br>
+                            <h4>Free Support</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="fa fa-rocket"></div><br>
+                            <h4>Free Upgrades</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+
+                        <!--Icon row 2-->
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="fa fa-line-chart"></div><br>
+                                <h4>UpTime Guarantee</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="fa fa-users"></div><br>
+                                <h4>Multiple Users</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="fa fa-plug"></div><br>
+                                <h4>Plug & Play</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--Info section-->
+    <section id="info">
+        <div class="container">
+            <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+                <div class="col-xs-12 col-sm-6 col-md-6  col-lg-6">
+                    <img src="./images/HTML5.svg.png" alt="picture">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6  col-lg-6">
+                    <h2>Core Features</h2>
+                    <ul>
+                        <li><i class="fa fa-check"></i>Fully Optimized</li>
+                        <li><i class="fa fa-check"></i>Free Support</li>
+                        <li><i class="fa fa-check"></i>Free Upgrades</li>
+                        <li><i class="fa fa-check"></i>UpTime Guarantee</li>
+                        <li><i class="fa fa-check"></i>Multiple Users</li>
+                        <li><i class="fa fa-check"></i>Plug & Play</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <!-- Subheader -->
+        <div id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>Contact</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Main page-->
+        <section id="page" class="contact">
+            <div class="container">
+                <div class="row center-xs center-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2><span class="primary-text">Get</span> In Touch</h2>
+                        <p>Please use this form for contact us</p>
+                        <form action="#" method="GET">
+                            <div>
+                                <label for="name"></label><br>
+                                <input type="text" name="name">
+                            </div>
+                            <div>
+                                <label for="name"></label><br>
+                                <input type="text" name="email">
+                            </div>
+                            <div>
+                                <label for="messsage"></label><br>
+                                <textarea name="message"></textarea>
+                            </div>
+                            <button type="submit" name="button">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Company -->
+    <section id="company">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fa fa-phone">(94) 532 99 11</i></li>
+                        <li><i class="fa fa-envelope">amirovqodir911@gmail.com</i></li>
+                        <li><i class="fa fa-map">Beruniy st 17, Samarqanda city</i></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h4>About Us</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, deleniti ducimus dolore
+                        hic error ipsam.</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h4>Newslatter</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <form action="#">
+                        <input type="text" name="email">
+                        <button type="submit" name="button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Footer-->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>Copyright &copy; 2020 | Samtuit-Soft</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs- col-sm-12 col-md-12 col-lg-12"></div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
