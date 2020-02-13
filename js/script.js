@@ -3,24 +3,22 @@ let countClick = 0;
 function openMenu() {
     ++countClick;
     let windowSize = window.innerWidth;
-
+    let element = document.getElementById("choose-lang");
     if (countClick%2 === 0) {
-        console.log(windowSize);
-        if (windowSize < 990) {
-            document.getElementById('wrap-Nav').style.position = "absolute";
+         if (windowSize < 990) {
+            element.classList.remove("open-wrap");
             document.getElementById('wrap-Nav').style.visibility = 'hidden';
         }
         else
-            document.getElementById('wrap-Nav').style.visibility = 'hidden';
+        document.getElementById('wrap-Nav').style.visibility = 'hidden';
     }
     else {
-        console.log(windowSize);
         if (windowSize < 990) {
-
-            document.getElementById('wrap-Nav').style.position = "relative";
+            element.classList.add("open-wrap");
             document.getElementById('wrap-Nav').style.visibility = 'visible'
         }
         else
+            
             document.getElementById('wrap-Nav').style.visibility = 'visible'
     }
 }
@@ -39,5 +37,9 @@ function openSideMenu() {
             element.classList.remove("openSideMenu");
         }
     } else  return
+}
 
+
+function changeLanguage() {
+    alert("Til o'zgartirish imkoniyati yuklanmoqda...");
 }

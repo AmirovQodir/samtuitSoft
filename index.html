@@ -44,19 +44,19 @@
                             </ul>
                         </nav>
                         <div class="top-action">
-                            <div class="choose-lang">
+                            <div class="choose-lang" id="choose-lang">
                                 <div class="current-lang">
-                                    <button id="lang" onclick="openMenu()"> <img id="lang" src="./images/eng.png"
+                                    <button id="lang" onclick="openMenu()"> <img id="lang" src="./images/uzbekistan.png"
                                             alt="lang_flag">
-                                        <span>En</span>
+                                        <span id="current-lang">Uz</span>
                                         <i class="fa fa-angle-down"></i>
                                     </button>
                                 </div>
                                 <div class="wrap-items" id="wrap-Nav">
                                     <ul class="list">
-                                        <li class="item eng active">English</li>
-                                        <li class="item rus ">Русский</li>
-                                        <li class="item uz ">O'zbek</li>
+                                        <li class="item eng "><button onclick="openMenu(), changeLanguage()">English</button></li>
+                                        <li class="item rus "><button onclick="openMenu(), changeLanguage()">Русский</button></li>
+                                        <li class="item uz active"><button onclick="openMenu(), changeLanguage() ">O'zbek</button></li>
                                     </ul>
                                 </div>
                             </div>
